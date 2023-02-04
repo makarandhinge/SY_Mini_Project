@@ -1,0 +1,18 @@
+body {
+    font-family: "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(219, 101, 11);
+}
+body{
+    height: 100px;
+   
+    background-image: linear-gradient(-90deg, rgb(6, 6, 6), rgb(247, 247, 238));
+  }
+  
