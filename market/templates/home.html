@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}
+    Welcome to SITCOE Cafeteria
+{% endblock %}
+{% block content %}
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center" style="color:rgb(255, 255, 255); background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://static.vecteezy.com/system/resources/thumbnails/014/533/892/small/food-background-food-menu-backround-photo.jpg);  background-position: center; background-repeat: no-repeat;background-size: 100%;">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 font-weight-normal">Sharad Institute of technology Cafeteria</h1>
+            <p class="lead font-weight-normal">Start Order Food by clicking the link below</p>
+            <a class="btn btn-primary" href="{{ url_for('Menu_page') }}">Get Started</a>
+        </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+    <footer>
+        <div class="container">
+          <div class="row">
+               
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              
+      
+      <div class="custom">
+          <h5>ADDRESS</h5>
+              <h6>SHARAD INSTITUTE OF TECHNOLOGY<br> COLLEGE OF ENGINEERING </h6>
+              <h6> Yadrav - Ichalkaranji - 416121 <br>
+                Tal- Shirol, Dist.- Kolhapur,  <br>
+                Maharashtra, India.<br>          
+              </h6>
+              <h6>EMAIL</h6><a class="email" href="mailto:contact@sitcoe.org.in"> contact@sitcoe.org.in</a></div>
+       
+              
+            </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+              
+      
+      <div class="custom">
+          <h6>CONTACT</h6>
+      <ul>
+      <li>
+      <h6>TELEPHONE</h6>
+      <a href="callto:2322253000/01">+91 (2322) 253000/01</a></li>
+      <li>
+      <h6>TOLL FREE NO.</h6>
+      <a href="callto:18002331419"> 1800-233-1419</a></li>
+      <li>
+      <h6>FAX</h6>
+      <a href="callto:912322252897">+91-2322-252897</a></li>
+      </ul></div>
+       
+             
+            </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+              
+      
+      <div class="custom">
+          <h5>PROGRAMMES</h5>
+      <ul>
+      <li><a href="/index.php/about-us/about-sit">About Us</a></li>
+      <li><a href="/index.php/academics/academic-schedule">Academics</a></li>
+      <li><a href="/index.php/computer-science/about-department">Departments</a></li>
+      <li><a href="/index.php/campus-life/student-organization">Campus Life</a></li>
+      <li><a href="/index.php/placements/overview">Placements</a></li>
+      <li><a href="/index.php/alumni-registration?view=form">Alumini</a></li>
+      </ul></div>
+               
+            </div>
+              
+           
+                </div>
+      
+        </div>
+        
+      </footer>
+{% endblock %}

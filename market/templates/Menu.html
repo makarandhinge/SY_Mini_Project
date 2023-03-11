@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="menu.css" /> {% extends'base.html' %}
+<!--inherence by the base.html file -->
+{% block title%} menu page {%endblock%} {% block content%}
+<script src="script.js"></script>
+<!-- <h3><b> menu </b></h3> -->
+<img src="https://www.milchbar.ch/img/stoerer@2/menu_en.png" alt="MENU" style=" width:120px; height:60px"><br><br>
+<input id="searchbar" onkeyup="search_menu()" type="text"
+name="search" placeholder="Search menu.." style="border-radius: 10px; border: none; padding: 3px; width: 25vw;">
+<button style="background-color: rgb(204, 74, 74)">
+  <i class="fa fa-search" style="font-size: 18px"> </i>
+</button>
+<br />
+<br>
+<table class="table table-hover" id="list" style="color: white; font-weight: bolder; width: 75vw; background: rgba(0, 0, 0, 0.733);" >
+  <thead>
+    <tr>
+      <!-- Your Columns HERE -->
+      <th scope="col">ID</th>
+      <th scope="col">name</th>
+      <th scope="col">barcode</th>
+      <th scope="col">price</th>
+      <th scope="col">option</th>
+      <th scope="col">
+        <form action="{{ url_for('bill_page') }}">
+          <button type="submit" class="btn btn-outline btn-success">
+            Order
+          </button>
+        </form>
+      </th>
+    </tr>
+  </thead>
+  <tbody style="color: white; font-weight: bold;">
+    <!-- Your rows inside the table HERE: -->
+    {% for item in items %} {% include 'includes/items_modals.html'%}
+    <tr>
+      <td class="item">{{ item.id }}</td>
+      <td class="item">{{item.name}}</td>
+      <td class="item">{{item.barcode}}</td>
+      <td class="item">{{item.price }} Rs</td>
+      <td class="item">
+        <form method="POST">
+          <label for="">Quantity</label>
+          <input
+            type="number"
+            name="Quantity"
+            value="1"
+            min="1"
+            max="25"
+            style="width: 5vw; background-color: rgb(67, 65, 65); color: white ; border: none;" 
+          />
+          <button
+            type="submit"
+            class="btn btn-sm btn-warning"
+          >
+            select
+          </button>
+          <input type="hidden" name="{{item.price}}" />
+       
+        <button
+          class="btn btn-outline btn-info"
+          data-toggle="modal"
+          data-target="#Modal-MoreInfo-{{ item.id }}"
+        >
+          more info
+        </button>
+      </form>
+      </td>
+    </tr>
+    {% endfor%}
+  </tbody>
+</table>
+<script src="index.js"></script>
+
+{%endblock%}
