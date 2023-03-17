@@ -1,12 +1,6 @@
  
 # FoodZone Project  ![logo](https://user-images.githubusercontent.com/57067060/69011032-54aa9100-0966-11ea-95d4-f1879d9c6fa1.png )
 
-#### Team Members :
-1. Merseni Bilel
-2. Sayeh ghazi
-3. Sfaxi Siwar
-4. Kaabechi abderrahim
-5. Werfellie Emna
 
 
 > Food Ordering Management System PHP &amp; MySQL Project
